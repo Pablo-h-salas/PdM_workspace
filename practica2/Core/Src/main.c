@@ -85,6 +85,9 @@ int main(void)
 	*@retval bool		:Devuelve 'true' si se han cumplido la cantidad de ciclos solicitados
 	*/
 bool LED_parpadeo(uint16_t LED[], tick_t timeOn, tick_t timeOff,uint16_t ciclos){
+	if (ciclos == 0){
+		return false;
+	}
 	static bool 		ledOn = true;
 	static uint8_t 	cnt =  0;
 	if (ledOn){
@@ -125,15 +128,25 @@ bool LED_parpadeo(uint16_t LED[], tick_t timeOn, tick_t timeOff,uint16_t ciclos)
 	*@param	duration	:	Duracion del retardo en la estructura
 	*/
 void delayInit( delay_t * delay, tick_t duration ){
+	if(delay == NULL){
+		return;
+	}
+	if(duration == 0){
+		return;
+	}
 	delay -> duration = duration;
 	delay -> running = false;
 }
 
 /**
-	*@brief verifica el estado del flag running
-	*@param delay			: Estructura delay_t
+	*@brief 	verifica el estado del flag running
+	*@param 	delay			: Estructura delay_t
+	*@retval 	bool_t		: devuelve true cuando se ha cumplido con el retardo
 	*/
 bool_t delayRead( delay_t * delay ){
+	if (delay == NULL){
+		return false;
+	}
 	if(delay ->running){
 		if(HAL_GetTick()- delay->startTime >= delay->duration){
 			delay ->running = false;
@@ -152,6 +165,13 @@ bool_t delayRead( delay_t * delay ){
 	*@param delay			: Estructura delay_t
 	*/
 void delayWrite( delay_t * delay, tick_t duration ){
+	if(delay == NULL){
+		return;
+	}
+	if(duration == 0){
+		return;
+	}
+	
 	delay->duration = duration;
 }
 /**
