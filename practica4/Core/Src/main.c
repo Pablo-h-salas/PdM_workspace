@@ -27,7 +27,7 @@
 uint16_t LED[] = {GPIO_PIN_0, GPIO_PIN_7, GPIO_PIN_14};
 delay_t demora;											// estructura para el timer 
 
-const uint32_t TIEMPOS[] = {500, 100, 100, 1000};
+const uint32_t TIEMPOS[] = {50, 250};
 const uint8_t SIZETIEMPOS = sizeof(TIEMPOS)/sizeof(TIEMPOS[0]);
 
 
