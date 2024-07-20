@@ -4,12 +4,12 @@
   * @file           : main.c
   * @brief          : Main program body
 	* @autor 					: Pablo Horacio Salas (pablo.salas.94@gmail.com)
-	*	@Descripcion 		: Ejercicio 3 PdM.
-											Implementar un módulo de software para trabajar con retardos no bloqueantes, 
-											agregando API_delay.c y API_delay.h
+	*	@Descripcion 		: Ejercicio 4 PdM.
+											Implementar un módulo de software para trabajar con:
+											retardos no bloqueantes, agregando API_delay.c y API_delay.h
+											antirebote, agregando API_debounce.c y API_debounce.h
 	* @Dependencias		: STM32F4xx_hal.h
-											main.h
-	* @Comentarios		: Se realizan los puntos 1, 2 y 3. 
+	* @Comentarios		: Se realizan los puntos 1, 2. 
   ******************************************************************************
   */
 
@@ -27,7 +27,7 @@
 uint16_t LED[] = {GPIO_PIN_0, GPIO_PIN_7, GPIO_PIN_14};
 delay_t demora;											// estructura para el timer 
 
-const uint32_t TIEMPOS[] = {50, 250};
+const uint32_t TIEMPOS[] = {50, 250}; // para parpadeos de 100 y 500
 const uint8_t SIZETIEMPOS = sizeof(TIEMPOS)/sizeof(TIEMPOS[0]);
 
 
@@ -63,16 +63,17 @@ int main(void)
 /*----------------------------------------------------------------------------*/
   while (1)
   {
+		/*Actualizar la FSM*/
 		debounceFSM_update();
 		
+		/*cambiar frecuencia de parapadeo si se presiona el pulsador*/
 		static int i = 0;
-		if (LED_parpadeo(LED,TIEMPOS[i],DUTY)){
-			if (i<SIZETIEMPOS-1){
-				i++;
-			}else{
-				i = 0;
-			}
+		if(readKey()){
+			i = (i<SIZETIEMPOS-1)?i+1:0;			
 		}
+		
+		/*llamar a funcion de parpadeo*/
+		LED_parpadeo(LED,TIEMPOS[i],DUTY);
 
   }
   /* USER CODE END 3 */

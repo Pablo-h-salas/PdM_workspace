@@ -6,7 +6,7 @@
 #define PORTbUTTON 	GPIOA
 
 /*----------------------------------------------------------------------------*/
-/*												DECLARACION DE VARIABLES Y TIPOS 						  			*/
+/*								DECLARACION DE VARIABLES PRIVADAS Y TIPOS 						  		*/
 /*----------------------------------------------------------------------------*/
 typedef enum{
 BUTTON_UP,
@@ -18,7 +18,13 @@ BUTTON_RAISING,
 static debounceState_t estadoActual;
 static delay_t debounceTimer;
 static bool_t flag = 0; // flag en 0 = pulsador no presionado
-uint16_t button = GPIO_PIN_0;
+static uint16_t button = GPIO_PIN_0;
+
+/*----------------------------------------------------------------------------*/
+/*											PROTOTIPO DE FUNCIONES PRIVADAS 								  		*/
+/*----------------------------------------------------------------------------*/
+
+
 /*----------------------------------------------------------------------------*/
 /*												DEFINICION DE FUNCIONES  						  							*/
 /*----------------------------------------------------------------------------*/
