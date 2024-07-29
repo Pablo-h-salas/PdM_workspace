@@ -521,6 +521,11 @@
               <FileType>5</FileType>
               <FilePath>..\Drivers\API\Inc\API_debounce.h</FilePath>
             </File>
+            <File>
+              <FileName>API_uart.h</FileName>
+              <FileType>5</FileType>
+              <FilePath>..\Drivers\API\Inc\API_uart.h</FilePath>
+            </File>
           </Files>
         </Group>
         <Group>

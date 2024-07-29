@@ -113,3 +113,23 @@ Implementar un programa que cambie la frecuencia de parpadeo del LED entre 100 m
 anti-rebote del módulo API_debounce y los retardos no bloqueantes del módulo API_delay y la función readKey.
 
 
+******************************************************************************************************************************************************************
+									PRACTICA 5
+******************************************************************************************************************************************************************
+1)
+Implementar un módulo de software en un archivos fuente API_uart.c con su correspondiente archivo de cabecera API_uart.h y ubicarlos en el proyecto dentro de  las 
+carpetas /drivers/API/src y /drivers/API/inc, respectivamente.
+En API_uart.h se deben ubicar los prototipos de las funciones públicas.
+bool_t uartInit();
+void uartSendString(uint8_t * pstring);
+void uartSendStringSize(uint8_t * pstring, uint16_t size);
+void uartReceiveStringSize(uint8_t * pstring, uint16_t size);
+
+En API_uart.c se deben ubicar los prototipos de las funciones privadas y la implementación de todas las funciones de módulo, privadas y públicas.
+
+2)
+Sobre el ejercicio de la práctica 4, implementar un programa que utilice el módulo de uart implementado por ustedes para informar al usuario cuando se producen los 
+flancos ascendentes y descendentes.
+En cada flanco se debe enviar un mensaje por la UART que diga “Flanco ascendente/descendente detectado”, según corresponda.  Cada mensaje se debe escribir en una 
+línea nueva en la terminal de la PC.
+
