@@ -14,6 +14,8 @@ word length : 8 bits
 bit de stop : 1 bit
 bit de paridad : none
 
+Observaciones: el punto 1 se puede apreciar en los API_uart.c y API_uart.h
+	       el punto 2 en API:debounce.c
 --------------------------------------------------
 
 1)
