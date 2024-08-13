@@ -1,4 +1,5 @@
 #include "stm32f4xx_hal.h"
+#include "main.h"
 #include "API_i2c.h"
 #include "API_uart.h"
 #include "stdio.h"
@@ -46,6 +47,18 @@ bool i2cInit(){
 		i2cScanner();
 		return true;
 	}
+	
+	  /** Configure Analogue filter */
+  if (HAL_I2CEx_ConfigAnalogFilter(&hi2c1, I2C_ANALOGFILTER_ENABLE) != HAL_OK)
+  {
+    Error_Handler();
+  }
+
+  /** Configure Digital filter */
+  if (HAL_I2CEx_ConfigDigitalFilter(&hi2c1, 0) != HAL_OK)
+  {
+    Error_Handler();
+  }
 }
 
 /**

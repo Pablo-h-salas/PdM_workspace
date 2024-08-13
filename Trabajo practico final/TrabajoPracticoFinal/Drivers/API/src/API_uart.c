@@ -2,8 +2,8 @@
 #include "API_uart.h"
 #include "API_DS1307.h"
 
-#define UART_POINTER 				&huart1
-#define UART_INSTANCE 			USART1
+#define UART_POINTER 				&huart3
+#define UART_INSTANCE 			USART3
 #define BAUDRATE 						115200
 #define TIMEOUT 						200
 #define MAX_BUFFER_SIZE 		256
@@ -12,7 +12,7 @@
 /*----------------------------------------------------------------------------*/
 /*												DECLARACION DE VARIABLES Y TIPOS 						  			*/
 /*----------------------------------------------------------------------------*/
-UART_HandleTypeDef huart1;
+UART_HandleTypeDef huart3;
 char receptorUart[MAX_BUFFER_SIZE];
 uint8_t rxByte;
 uint8_t rxIndex =0;
@@ -37,14 +37,14 @@ bool_t uartInit(){
 	uint32_t timeMsg = (dataSize*10*1000)/BAUDRATE;
 	
 	/*Establecer parametros de configuración*/
-	huart1.Instance = UART_INSTANCE;
-  huart1.Init.BaudRate = 115200;
-  huart1.Init.WordLength = UART_WORDLENGTH_8B;
-  huart1.Init.StopBits = UART_STOPBITS_1;
-  huart1.Init.Parity = UART_PARITY_NONE;
-  huart1.Init.Mode = UART_MODE_TX_RX;
-  huart1.Init.HwFlowCtl = UART_HWCONTROL_NONE;
-  huart1.Init.OverSampling = UART_OVERSAMPLING_16;
+	huart3.Instance = UART_INSTANCE;
+  huart3.Init.BaudRate = 115200;
+  huart3.Init.WordLength = UART_WORDLENGTH_8B;
+  huart3.Init.StopBits = UART_STOPBITS_1;
+  huart3.Init.Parity = UART_PARITY_NONE;
+  huart3.Init.Mode = UART_MODE_TX_RX;
+  huart3.Init.HwFlowCtl = UART_HWCONTROL_NONE;
+  huart3.Init.OverSampling = UART_OVERSAMPLING_16;
 	
 	/*consultar resultado de la inicializion*/
   if (HAL_UART_Init(UART_POINTER) != HAL_OK)

@@ -1,0 +1,89 @@
+<html>
+<body>
+<pre>
+<h1>µVision Build Log</h1>
+<h2>Tool Versions:</h2>
+IDE-Version: µVision V5.25.3.0
+Copyright (C) 2018 ARM Ltd and ARM Germany GmbH. All rights reserved.
+License Information: pablo salas, unlam, LIC=----
+ 
+Tool Versions:
+Toolchain:       MDK-Lite  Version: 5.25.2.0
+Toolchain Path:  C:\Keil_v5\ARM\ARMCC\Bin
+C Compiler:      Armcc.exe V5.06 update 6 (build 750)
+Assembler:       Armasm.exe V5.06 update 6 (build 750)
+Linker/Locator:  ArmLink.exe V5.06 update 6 (build 750)
+Library Manager: ArmAr.exe V5.06 update 6 (build 750)
+Hex Converter:   FromElf.exe V5.06 update 6 (build 750)
+CPU DLL:         SARMCM3.DLL V5.25.2.0
+Dialog DLL:      DCM.DLL V1.17.1.0
+Target DLL:      STLink\ST-LINKIII-KEIL_SWO.dll V3.0.1.0
+Dialog DLL:      TCM.DLL V1.35.1.0
+ 
+<h2>Project:</h2>
+D:\pablo\Desktop\MIS_APUNTES\Mis_repositorios\PdM_workspace\Trabajo practico final\TrabajoPracticoFinal\MDK-ARM\TrabajoPracticoFinal.uvprojx
+Project File Date:  08/13/2024
+
+<h2>Output:</h2>
+*** Using Compiler 'V5.06 update 6 (build 750)', folder: 'C:\Keil_v5\ARM\ARMCC\Bin'
+Build target 'TrabajoPracticoFinal'
+compiling API_uart.c...
+..\Drivers\API\inc\API_DS1307.h(41): warning:  #1295-D: Deprecated declaration rtcFSM_init - give arg types
+  void rtcFSM_init();
+..\Drivers\API\inc\API_DS1307.h(42): warning:  #1295-D: Deprecated declaration rtcFSM_update - give arg types
+  void rtcFSM_update();
+..\Drivers\API\inc\API_DS1307.h(46): warning:  #1295-D: Deprecated declaration setTime - give arg types
+  bool setTime();
+..\Drivers\API\inc\API_DS1307.h(47): warning:  #1295-D: Deprecated declaration setDate - give arg types
+  bool setDate();
+..\Drivers\API\inc\API_DS1307.h(50): warning:  #1295-D: Deprecated declaration triggerAlarm - give arg types
+  bool triggerAlarm();
+..\Drivers\API\inc\API_DS1307.h(53): warning:  #1295-D: Deprecated declaration commandErrorHandler - give arg types
+  void commandErrorHandler();
+..\Drivers\API\inc\API_DS1307.h(54): warning:  #1295-D: Deprecated declaration settingsErrorHandler - give arg types
+  void settingsErrorHandler();
+..\Drivers\API\inc\API_DS1307.h(59): warning:  #1-D: last line of file ends without a newline
+  #endif /*__API_DS1307_H*/
+..\Drivers\API\inc\API_uart.h(18): warning:  #1295-D: Deprecated declaration uartInit - give arg types
+  bool_t uartInit();
+..\Drivers\API\inc\API_uart.h(22): warning:  #1295-D: Deprecated declaration readuartStatus - give arg types
+  bool readuartStatus();
+..\Drivers\API\inc\API_uart.h(23): warning:  #1295-D: Deprecated declaration readCommand - give arg types
+  commandType readCommand();
+..\Drivers\API\inc\API_uart.h(25): warning:  #1-D: last line of file ends without a newline
+  #endif /*__API_UART_H*/
+..\Drivers\API\src\API_uart.c(24): warning:  #1295-D: Deprecated declaration uartErrorHandler - give arg types
+  static void uartErrorHandler();
+..\Drivers\API\src\API_uart.c(68): warning:  #111-D: statement is unreachable
+  	if(HAL_UART_Receive_IT(UART_POINTER,&rxByte, 1)!= HAL_OK){
+..\Drivers\API\src\API_uart.c: 14 warnings, 0 errors
+linking...
+Program Size: Code=12386 RO-data=610 RW-data=124 ZI-data=2044  
+FromELF: creating hex file...
+"TrabajoPracticoFinal\TrabajoPracticoFinal.axf" - 0 Error(s), 14 Warning(s).
+
+<h2>Software Packages used:</h2>
+
+Package Vendor: ARM
+                http://www.keil.com/pack/ARM.CMSIS.5.4.0.pack
+                ARM.CMSIS.5.4.0
+                CMSIS (Cortex Microcontroller Software Interface Standard)
+   * Component: CORE Version: 5.1.2
+
+Package Vendor: Keil
+                http://www.keil.com/pack/Keil.STM32F4xx_DFP.2.13.0.pack
+                Keil.STM32F4xx_DFP.2.13.0
+                STMicroelectronics STM32F4 Series Device Support, Drivers and Examples
+
+<h2>Collection of Component include folders:</h2>
+  .\RTE\_TrabajoPracticoFinal
+  C:\Keil_v5\ARM\PACK\ARM\CMSIS\5.4.0\CMSIS\Core\Include
+  C:\Keil_v5\ARM\PACK\Keil\STM32F4xx_DFP\2.13.0\Drivers\CMSIS\Device\ST\STM32F4xx\Include
+
+<h2>Collection of Component Files used:</h2>
+
+   * Component: ARM::CMSIS:CORE:5.1.2
+Build Time Elapsed:  00:00:04
+</pre>
+</body>
+</html>
