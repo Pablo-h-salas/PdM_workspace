@@ -49,7 +49,6 @@ bool setAlarm(alarm_t * alarm);
 bool checkAlarm(alarm_t* alarm, timeDate_t *rtcTime);
 bool triggerAlarm();
 void showInfo(timeDate_t *rtc);
-void bringSettings(timeDate_t *rtc);
 void commandErrorHandler();
 void settingsErrorHandler();
 uint8_t toBCD (uint8_t value);

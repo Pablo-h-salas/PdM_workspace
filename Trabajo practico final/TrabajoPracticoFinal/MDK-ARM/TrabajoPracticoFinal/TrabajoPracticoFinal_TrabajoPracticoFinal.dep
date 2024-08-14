@@ -34,8 +34,8 @@ I (../Drivers/STM32F4xx_HAL_Driver/Inc/stm32f4xx_hal_pwr_ex.h)(0x6674F7E8)
 I (../Drivers/STM32F4xx_HAL_Driver/Inc/stm32f4xx_hal_uart.h)(0x6674F7E8)
 I (..\Drivers\API\inc\API_i2c.h)(0x66B7D67C)
 I (C:\Keil_v5\ARM\ARMCC\include\stdbool.h)(0x599F67DE)
-I (..\Drivers\API\inc\API_uart.h)(0x66BBE514)
-I (..\Drivers\API\inc\API_DS1307.h)(0x66B92904)
+I (..\Drivers\API\inc\API_uart.h)(0x66BBEF04)
+I (..\Drivers\API\inc\API_DS1307.h)(0x66BBF42C)
 I (..\Drivers\API\inc\API_delay.h)(0x66A8158D)
 F (../Core/Src/stm32f4xx_it.c)(0x66BAA5C5)(--c99 -c --cpu Cortex-M4.fp -D__EVAL -g -O3 --apcs=interwork --split_sections -I ../Core/Inc -I ../Drivers/STM32F4xx_HAL_Driver/Inc -I ../Drivers/STM32F4xx_HAL_Driver/Inc/Legacy -I ../Drivers/CMSIS/Device/ST/STM32F4xx/Include -I ../Drivers/CMSIS/Include -I ..\Drivers\API\inc-I.\RTE\_TrabajoPracticoFinal-IC:\Keil_v5\ARM\PACK\ARM\CMSIS\5.4.0\CMSIS\Core\Include-IC:\Keil_v5\ARM\PACK\Keil\STM32F4xx_DFP\2.13.0\Drivers\CMSIS\Device\ST\STM32F4xx\Include-D__UVISION_VERSION="525" -D_RTE_ -DSTM32F429xx -DUSE_HAL_DRIVER -DSTM32F429xx-o trabajopracticofinal\stm32f4xx_it.o --omf_browse trabajopracticofinal\stm32f4xx_it.crf --depend trabajopracticofinal\stm32f4xx_it.d)
 I (../Core/Inc/main.h)(0x66BAA5C6)
@@ -725,8 +725,8 @@ I (../Drivers/STM32F4xx_HAL_Driver/Inc/stm32f4xx_hal_i2c_ex.h)(0x6674F7E8)
 I (../Drivers/STM32F4xx_HAL_Driver/Inc/stm32f4xx_hal_pwr.h)(0x6674F7E8)
 I (../Drivers/STM32F4xx_HAL_Driver/Inc/stm32f4xx_hal_pwr_ex.h)(0x6674F7E8)
 I (../Drivers/STM32F4xx_HAL_Driver/Inc/stm32f4xx_hal_uart.h)(0x6674F7E8)
-I (..\Drivers\API\inc\API_uart.h)(0x66BBE514)
-I (..\Drivers\API\inc\API_DS1307.h)(0x66B92904)
+I (..\Drivers\API\inc\API_uart.h)(0x66BBEF04)
+I (..\Drivers\API\inc\API_DS1307.h)(0x66BBF42C)
 F (..\Drivers\API\src\API_delay.c)(0x66AF9ED5)(--c99 -c --cpu Cortex-M4.fp -D__EVAL -g -O3 --apcs=interwork --split_sections -I ../Core/Inc -I ../Drivers/STM32F4xx_HAL_Driver/Inc -I ../Drivers/STM32F4xx_HAL_Driver/Inc/Legacy -I ../Drivers/CMSIS/Device/ST/STM32F4xx/Include -I ../Drivers/CMSIS/Include -I ..\Drivers\API\inc-I.\RTE\_TrabajoPracticoFinal-IC:\Keil_v5\ARM\PACK\ARM\CMSIS\5.4.0\CMSIS\Core\Include-IC:\Keil_v5\ARM\PACK\Keil\STM32F4xx_DFP\2.13.0\Drivers\CMSIS\Device\ST\STM32F4xx\Include-D__UVISION_VERSION="525" -D_RTE_ -DSTM32F429xx -DUSE_HAL_DRIVER -DSTM32F429xx-o trabajopracticofinal\api_delay.o --omf_browse trabajopracticofinal\api_delay.crf --depend trabajopracticofinal\api_delay.d)
 I (..\Drivers\API\inc\API_delay.h)(0x66A8158D)
 I (C:\Keil_v5\ARM\ARMCC\include\stdint.h)(0x599F67DE)
@@ -760,8 +760,8 @@ I (../Drivers/STM32F4xx_HAL_Driver/Inc/stm32f4xx_hal_i2c_ex.h)(0x6674F7E8)
 I (../Drivers/STM32F4xx_HAL_Driver/Inc/stm32f4xx_hal_pwr.h)(0x6674F7E8)
 I (../Drivers/STM32F4xx_HAL_Driver/Inc/stm32f4xx_hal_pwr_ex.h)(0x6674F7E8)
 I (../Drivers/STM32F4xx_HAL_Driver/Inc/stm32f4xx_hal_uart.h)(0x6674F7E8)
-F (..\Drivers\API\src\API_DS1307.c)(0x66B92E8D)(--c99 -c --cpu Cortex-M4.fp -D__EVAL -g -O3 --apcs=interwork --split_sections -I ../Core/Inc -I ../Drivers/STM32F4xx_HAL_Driver/Inc -I ../Drivers/STM32F4xx_HAL_Driver/Inc/Legacy -I ../Drivers/CMSIS/Device/ST/STM32F4xx/Include -I ../Drivers/CMSIS/Include -I ..\Drivers\API\inc-I.\RTE\_TrabajoPracticoFinal-IC:\Keil_v5\ARM\PACK\ARM\CMSIS\5.4.0\CMSIS\Core\Include-IC:\Keil_v5\ARM\PACK\Keil\STM32F4xx_DFP\2.13.0\Drivers\CMSIS\Device\ST\STM32F4xx\Include-D__UVISION_VERSION="525" -D_RTE_ -DSTM32F429xx -DUSE_HAL_DRIVER -DSTM32F429xx-o trabajopracticofinal\api_ds1307.o --omf_browse trabajopracticofinal\api_ds1307.crf --depend trabajopracticofinal\api_ds1307.d)
-I (..\Drivers\API\inc\API_DS1307.h)(0x66B92904)
+F (..\Drivers\API\src\API_DS1307.c)(0x66BBF42C)(--c99 -c --cpu Cortex-M4.fp -D__EVAL -g -O3 --apcs=interwork --split_sections -I ../Core/Inc -I ../Drivers/STM32F4xx_HAL_Driver/Inc -I ../Drivers/STM32F4xx_HAL_Driver/Inc/Legacy -I ../Drivers/CMSIS/Device/ST/STM32F4xx/Include -I ../Drivers/CMSIS/Include -I ..\Drivers\API\inc-I.\RTE\_TrabajoPracticoFinal-IC:\Keil_v5\ARM\PACK\ARM\CMSIS\5.4.0\CMSIS\Core\Include-IC:\Keil_v5\ARM\PACK\Keil\STM32F4xx_DFP\2.13.0\Drivers\CMSIS\Device\ST\STM32F4xx\Include-D__UVISION_VERSION="525" -D_RTE_ -DSTM32F429xx -DUSE_HAL_DRIVER -DSTM32F429xx-o trabajopracticofinal\api_ds1307.o --omf_browse trabajopracticofinal\api_ds1307.crf --depend trabajopracticofinal\api_ds1307.d)
+I (..\Drivers\API\inc\API_DS1307.h)(0x66BBF42C)
 I (C:\Keil_v5\ARM\ARMCC\include\stdint.h)(0x599F67DE)
 I (C:\Keil_v5\ARM\ARMCC\include\stdbool.h)(0x599F67DE)
 I (../Drivers/STM32F4xx_HAL_Driver/Inc/stm32f4xx_hal.h)(0x6674F7E8)
@@ -794,10 +794,10 @@ I (../Drivers/STM32F4xx_HAL_Driver/Inc/stm32f4xx_hal_pwr.h)(0x6674F7E8)
 I (../Drivers/STM32F4xx_HAL_Driver/Inc/stm32f4xx_hal_pwr_ex.h)(0x6674F7E8)
 I (../Drivers/STM32F4xx_HAL_Driver/Inc/stm32f4xx_hal_uart.h)(0x6674F7E8)
 I (..\Drivers\API\inc\API_i2c.h)(0x66B7D67C)
-I (..\Drivers\API\inc\API_uart.h)(0x66BBE514)
+I (..\Drivers\API\inc\API_uart.h)(0x66BBEF04)
 I (..\Drivers\API\inc\API_delay.h)(0x66A8158D)
 I (C:\Keil_v5\ARM\ARMCC\include\stdio.h)(0x599F67DC)
-F (..\Drivers\API\src\API_i2c.c)(0x66BBE514)(--c99 -c --cpu Cortex-M4.fp -D__EVAL -g -O3 --apcs=interwork --split_sections -I ../Core/Inc -I ../Drivers/STM32F4xx_HAL_Driver/Inc -I ../Drivers/STM32F4xx_HAL_Driver/Inc/Legacy -I ../Drivers/CMSIS/Device/ST/STM32F4xx/Include -I ../Drivers/CMSIS/Include -I ..\Drivers\API\inc-I.\RTE\_TrabajoPracticoFinal-IC:\Keil_v5\ARM\PACK\ARM\CMSIS\5.4.0\CMSIS\Core\Include-IC:\Keil_v5\ARM\PACK\Keil\STM32F4xx_DFP\2.13.0\Drivers\CMSIS\Device\ST\STM32F4xx\Include-D__UVISION_VERSION="525" -D_RTE_ -DSTM32F429xx -DUSE_HAL_DRIVER -DSTM32F429xx-o trabajopracticofinal\api_i2c.o --omf_browse trabajopracticofinal\api_i2c.crf --depend trabajopracticofinal\api_i2c.d)
+F (..\Drivers\API\src\API_i2c.c)(0x66BBEF04)(--c99 -c --cpu Cortex-M4.fp -D__EVAL -g -O3 --apcs=interwork --split_sections -I ../Core/Inc -I ../Drivers/STM32F4xx_HAL_Driver/Inc -I ../Drivers/STM32F4xx_HAL_Driver/Inc/Legacy -I ../Drivers/CMSIS/Device/ST/STM32F4xx/Include -I ../Drivers/CMSIS/Include -I ..\Drivers\API\inc-I.\RTE\_TrabajoPracticoFinal-IC:\Keil_v5\ARM\PACK\ARM\CMSIS\5.4.0\CMSIS\Core\Include-IC:\Keil_v5\ARM\PACK\Keil\STM32F4xx_DFP\2.13.0\Drivers\CMSIS\Device\ST\STM32F4xx\Include-D__UVISION_VERSION="525" -D_RTE_ -DSTM32F429xx -DUSE_HAL_DRIVER -DSTM32F429xx-o trabajopracticofinal\api_i2c.o --omf_browse trabajopracticofinal\api_i2c.crf --depend trabajopracticofinal\api_i2c.d)
 I (../Drivers/STM32F4xx_HAL_Driver/Inc/stm32f4xx_hal.h)(0x6674F7E8)
 I (../Core/Inc/stm32f4xx_hal_conf.h)(0x66BAA5C6)
 I (../Drivers/STM32F4xx_HAL_Driver/Inc/stm32f4xx_hal_rcc.h)(0x6674F7E8)
@@ -831,11 +831,11 @@ I (../Drivers/STM32F4xx_HAL_Driver/Inc/stm32f4xx_hal_uart.h)(0x6674F7E8)
 I (../Core/Inc/main.h)(0x66BAA5C6)
 I (..\Drivers\API\inc\API_i2c.h)(0x66B7D67C)
 I (C:\Keil_v5\ARM\ARMCC\include\stdbool.h)(0x599F67DE)
-I (..\Drivers\API\inc\API_uart.h)(0x66BBE514)
-I (..\Drivers\API\inc\API_DS1307.h)(0x66B92904)
+I (..\Drivers\API\inc\API_uart.h)(0x66BBEF04)
+I (..\Drivers\API\inc\API_DS1307.h)(0x66BBF42C)
 I (..\Drivers\API\inc\API_delay.h)(0x66A8158D)
 I (C:\Keil_v5\ARM\ARMCC\include\stdio.h)(0x599F67DC)
-F (..\Drivers\API\src\API_uart.c)(0x66BBE5FB)(--c99 -c --cpu Cortex-M4.fp -D__EVAL -g -O3 --apcs=interwork --split_sections -I ../Core/Inc -I ../Drivers/STM32F4xx_HAL_Driver/Inc -I ../Drivers/STM32F4xx_HAL_Driver/Inc/Legacy -I ../Drivers/CMSIS/Device/ST/STM32F4xx/Include -I ../Drivers/CMSIS/Include -I ..\Drivers\API\inc-I.\RTE\_TrabajoPracticoFinal-IC:\Keil_v5\ARM\PACK\ARM\CMSIS\5.4.0\CMSIS\Core\Include-IC:\Keil_v5\ARM\PACK\Keil\STM32F4xx_DFP\2.13.0\Drivers\CMSIS\Device\ST\STM32F4xx\Include-D__UVISION_VERSION="525" -D_RTE_ -DSTM32F429xx -DUSE_HAL_DRIVER -DSTM32F429xx-o trabajopracticofinal\api_uart.o --omf_browse trabajopracticofinal\api_uart.crf --depend trabajopracticofinal\api_uart.d)
+F (..\Drivers\API\src\API_uart.c)(0x66BBF42C)(--c99 -c --cpu Cortex-M4.fp -D__EVAL -g -O3 --apcs=interwork --split_sections -I ../Core/Inc -I ../Drivers/STM32F4xx_HAL_Driver/Inc -I ../Drivers/STM32F4xx_HAL_Driver/Inc/Legacy -I ../Drivers/CMSIS/Device/ST/STM32F4xx/Include -I ../Drivers/CMSIS/Include -I ..\Drivers\API\inc-I.\RTE\_TrabajoPracticoFinal-IC:\Keil_v5\ARM\PACK\ARM\CMSIS\5.4.0\CMSIS\Core\Include-IC:\Keil_v5\ARM\PACK\Keil\STM32F4xx_DFP\2.13.0\Drivers\CMSIS\Device\ST\STM32F4xx\Include-D__UVISION_VERSION="525" -D_RTE_ -DSTM32F429xx -DUSE_HAL_DRIVER -DSTM32F429xx-o trabajopracticofinal\api_uart.o --omf_browse trabajopracticofinal\api_uart.crf --depend trabajopracticofinal\api_uart.d)
 I (../Drivers/STM32F4xx_HAL_Driver/Inc/stm32f4xx_hal.h)(0x6674F7E8)
 I (../Core/Inc/stm32f4xx_hal_conf.h)(0x66BAA5C6)
 I (../Drivers/STM32F4xx_HAL_Driver/Inc/stm32f4xx_hal_rcc.h)(0x6674F7E8)
@@ -866,7 +866,7 @@ I (../Drivers/STM32F4xx_HAL_Driver/Inc/stm32f4xx_hal_i2c_ex.h)(0x6674F7E8)
 I (../Drivers/STM32F4xx_HAL_Driver/Inc/stm32f4xx_hal_pwr.h)(0x6674F7E8)
 I (../Drivers/STM32F4xx_HAL_Driver/Inc/stm32f4xx_hal_pwr_ex.h)(0x6674F7E8)
 I (../Drivers/STM32F4xx_HAL_Driver/Inc/stm32f4xx_hal_uart.h)(0x6674F7E8)
-I (..\Drivers\API\inc\API_uart.h)(0x66BBE514)
+I (..\Drivers\API\inc\API_uart.h)(0x66BBEF04)
 I (C:\Keil_v5\ARM\ARMCC\include\stdbool.h)(0x599F67DE)
-I (..\Drivers\API\inc\API_DS1307.h)(0x66B92904)
+I (..\Drivers\API\inc\API_DS1307.h)(0x66BBF42C)
 I (..\Drivers\API\inc\API_delay.h)(0x66A8158D)

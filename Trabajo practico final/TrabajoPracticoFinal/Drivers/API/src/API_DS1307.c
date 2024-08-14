@@ -4,7 +4,6 @@
 #include "stdio.h"
 
 #define DS1307ADDRESS 				0x68
-#define INI_REG_ADDRESS 			0x00
 #define DATE_REG_ADDRESS			0x04	
 #define TOTAL_REG							7		// seg, min, horas, dia de semana, fecha de mes,
 																	// mes, año																	
@@ -18,9 +17,8 @@
 /*												DECLARACION DE VARIABLES Y TIPOS 						  			*/
 /*----------------------------------------------------------------------------*/
 static const uint8_t initialRegisterAddress = 0x00;
-static const uint8_t hourRegisterAddress 		= 0x02;
-timeDate_t myrtcData;
-alarm_t myAlarm;
+timeDate_t 	myrtcData;
+alarm_t 		myAlarm;
 
 /*----------------------------------------------------------------------------*/
 /*											PROTOTIPOS DE FUNCIONES PRIVADAS 						  				*/
@@ -34,7 +32,7 @@ typedef enum{
 	ALARM_TRIGGERED
 }rtcState_t;
 
-static rtcState_t estadoActual;
+static 			rtcState_t estadoActual;
 static bool compare (uint8_t *string1, uint8_t *string2, size_t size);
 /*----------------------------------------------------------------------------*/
 /*														DEFINICION DE FUNCIONES 						  					*/
@@ -211,7 +209,7 @@ void validateCommand(uint8_t * commandBuffer, timeDate_t * timeSettings){
 bool setTime(){
 	//establecer segundos a cero y construir vector a enviar
 	timeParameters.second=0x00;
-	uint8_t escritura_rtc[]= {INI_REG_ADDRESS,timeParameters.second, timeParameters.minute,timeParameters.hour};
+	uint8_t escritura_rtc[]= {initialRegisterAddress,timeParameters.second, timeParameters.minute,timeParameters.hour};
 	//enviar información
 	if(i2cSendData(DS1307ADDRESS, escritura_rtc, sizeof(escritura_rtc))){
 		timeParameters.currentCommand = COMMAND_NONE;
@@ -313,9 +311,6 @@ static bool compare (uint8_t *string1, uint8_t *string2, size_t size){
 	}
 }
 
-void bringSettings(timeDate_t *rtc){
-	
-}
 
 /**
 	*@brief 	obtiene la representacion BCD a partir de un entero				

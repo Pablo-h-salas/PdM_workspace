@@ -68,15 +68,14 @@ bool i2cInit(){
 	*@return 	none
 	*/
 void i2cScanner(){
-	/*string que contiene la direccion I2C*/
+	/*variable para contener la direccion I2C*/
 	char hexAddress [MAX_SIZE_ADDRESS];
-	/*preguntar a todos los dispositivos conectados a hi2c1 si estan listos*/
+	/*for: conocer todos los dispositivos vinculados a i2c1*/
 	for(uint8_t i=1; i<128; i++){
-	/*si estan listos, informar su direccion por UART*/
-	/*i<<1 convierte la direccion de 7 bits a 8 bits, el bit menos 
-		significativo se usa para indicar lectura o escritura*/
+		/*i<<1 :los 7 bits mas significativos representan la direccion I2C*/
 		if(HAL_I2C_IsDeviceReady(&hi2c1, (uint16_t)(i<<1), 1, 100) == HAL_OK){
 			sprintf(hexAddress,"%02X",i);
+			/*informar su direccion por UART*/
 			uartSendString((uint8_t *)"Dispositivo detectado: 0x");
 			uartSendString((uint8_t *)hexAddress);
 			uartSendString((uint8_t *)"\r\n");

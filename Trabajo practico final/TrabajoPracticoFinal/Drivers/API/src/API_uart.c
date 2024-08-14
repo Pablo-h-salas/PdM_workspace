@@ -64,7 +64,8 @@ bool_t uartInit(){
 	}
 	
 	/*Habilitar interrupciones UART*/
-	// comienza con un 1 byte para detectar el inicio
+	/* rxByte: para completar la recepcion de datos byte a byte y llamar 
+	   HAL_UART_RxCpltCallback*/
 	if(HAL_UART_Receive_IT(UART_POINTER,&rxByte, 1)!= HAL_OK){
 		uartSendString((uint8_t *) "error en la función HAL_UART_Receive_IT");
 	}else{
@@ -79,7 +80,7 @@ bool_t uartInit(){
 	*@return 	-
 	*/
 void HAL_UART_RxCpltCallback(UART_HandleTypeDef *huart){
-	// IMPORTANTE: rxIndex nos da la cantidad de caracteres + 1 (retorno de carro)
+	// rxIndex nos da la cantidad de caracteres + 1 (retorno de carro)
 	if (huart->Instance == UART_INSTANCE){
 		receptorUart [rxIndex]= rxByte;
 		/*consultar si es el final del mensaje*/
@@ -93,10 +94,8 @@ void HAL_UART_RxCpltCallback(UART_HandleTypeDef *huart){
 		else{
 			rxIndex ++;
 			// poner codigo para evitar el desbordamiento del buffer
-			
 		}
-		
-	/*Inicio nuevamente la recepcion con interrupcion*/
+	/*Iniciar nuevamente la recepcion con interrupcion*/
 	HAL_UART_Receive_IT(UART_POINTER,&rxByte, 1);
 	}
 }
@@ -192,7 +191,7 @@ static void uartErrorHandler() {
 /**
 	*@brief 	Consultar estado de inicializacion de UART
 	*@param 	none
-	*@return		void
+	*@return	void
 	*/
 bool readuartStatus(){
 	if(uartStatus){
@@ -211,11 +210,3 @@ commandType readCommand(){
 	return timeParameters.currentCommand;
 }
 
-/**
-	*@brief 	Copia la informacion contenidos en una estructura timeDate
-	*@param 	none
-	*@return	
-	*/
-void bringData(timeDate_t * rtcSettings){
-	
-}

@@ -21,5 +21,4 @@ void uartSendStringSize(uint8_t * pstring, uint16_t size);
 void uartReceiveStringSize(uint8_t * pstring, uint16_t size);
 bool readuartStatus();
 commandType readCommand();
-void bringData(timeDate_t * rtcSettings);
 #endif /*__API_UART_H*/
