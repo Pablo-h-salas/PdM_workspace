@@ -7,12 +7,15 @@
 #define DATE_REG_ADDRESS			0x04	
 #define TOTAL_REG							7		// seg, min, horas, dia de semana, fecha de mes,
 																	// mes, año																	
-#define COMMAND_SET_TIME_FORMAT 		"set time hh:mm"
+#define SET_TIME_FORMAT 						"set time %2hhu:%2hhu"
 #define COMMAND_SET_TIME_BASE				"set time"
-#define COMMAND_SET_DATE_FORMAT			"set date dd.mm.aa"
+#define SET_TIME_DATA_COUNT					2
+#define SET_DATE_FORMAT							"set date %2hhu.%2hhu.%2hhu"
 #define COMMAND_SET_DATE_BASE				"set date"
-#define COMMAND_SET_ALARM_FORMAT 		"set alarm dd.mm.aa hh:mm"
+#define SET_DATE_DATA_COUNT					3	
+#define SET_ALARM_FORMAT 						"set alarm %2hhu.%2hhu.%2hhu %2hhu:%2hhu"
 #define COMMAND_SET_ALARM_BASE			"set alarm"
+#define SET_ALARM_DATA_COUNT				5
 /*----------------------------------------------------------------------------*/
 /*												DECLARACION DE VARIABLES Y TIPOS 						  			*/
 /*----------------------------------------------------------------------------*/
@@ -25,15 +28,15 @@ typedef enum{
 	ALARM_TRIGGERED
 }rtcState_t;
 
-static const uint8_t initialRegisterAddress = 0x00;
-timeDate_t 	myrtcData;
-static 			alarm_t 		myAlarm;
-static 			rtcState_t estadoActual;
+static const 	uint8_t initialRegisterAddress = 0x00;
+timeDate_t 		myrtcData;
+static 				alarm_t 		myAlarm;
+static 				rtcState_t estadoActual;
 /*----------------------------------------------------------------------------*/
 /*											PROTOTIPOS DE FUNCIONES PRIVADAS 						  				*/
 /*----------------------------------------------------------------------------*/
 
-static bool compare (uint8_t *string1, uint8_t *string2, size_t size);
+static bool 	compare (uint8_t *string1, uint8_t *string2, size_t size);
 /*----------------------------------------------------------------------------*/
 /*														DEFINICION DE FUNCIONES 						  					*/
 /*----------------------------------------------------------------------------*/
@@ -165,7 +168,7 @@ void validateCommand(uint8_t * commandBuffer, timeDate_t * timeSettings){
 	/*************consultar si el comando es del tipo "set time"************/
 	 if (compare(commandBuffer,(uint8_t *)COMMAND_SET_TIME_BASE,sizeof(COMMAND_SET_TIME_BASE)-1 )){
         // extraer horas y minutos del string
-		 if (sscanf((const char *)commandBuffer, "set time %2hhu:%2hhu", &hours, &minutes)== 2){
+		 if (sscanf((const char *)commandBuffer, SET_TIME_FORMAT, &hours, &minutes)== SET_TIME_DATA_COUNT){
 			 if(hours<=23 && minutes<=59){
 			 timeSettings ->hour 		= toBCD(hours);
 			 timeSettings ->minute	= toBCD(minutes);
@@ -179,7 +182,7 @@ void validateCommand(uint8_t * commandBuffer, timeDate_t * timeSettings){
 	/****************consultar si el comando es del tipo "set date"********/
 	if (compare(commandBuffer,(uint8_t *)COMMAND_SET_DATE_BASE,sizeof(COMMAND_SET_DATE_BASE)-1 )){
 		// extraer dia, mes y año del string
-		if (sscanf((const char *)commandBuffer, "set date %2hhu.%2hhu.%2hhu", &day, &month,&year)== 3){
+		if (sscanf((const char *)commandBuffer, SET_DATE_FORMAT, &day, &month,&year)== SET_DATE_DATA_COUNT){
 				if(day<=31 && month<=12){
 					timeSettings->day			= toBCD(day);
 					timeSettings->month 	= toBCD(month);
@@ -191,7 +194,7 @@ void validateCommand(uint8_t * commandBuffer, timeDate_t * timeSettings){
 	/**************consultar si el comando es del tipo "set alarm"*********/
 	if (compare(commandBuffer,(uint8_t *)COMMAND_SET_ALARM_BASE,sizeof(COMMAND_SET_ALARM_BASE)-1 )){
 		// extraer dia, mes, año, hora, minutos
-		if (sscanf((const char *)commandBuffer, "set alarm %2hhu.%2hhu.%2hhu %2hhu:%2hhu", &day, &month, &year, &hours, &minutes)== 5){
+		if (sscanf((const char *)commandBuffer, SET_ALARM_FORMAT, &day, &month, &year, &hours, &minutes)== SET_ALARM_DATA_COUNT){
 			if(day<=31 && month<=12 && hours<=23 && minutes<=59){
 			timeSettings->day 		= toBCD(day);
 			timeSettings->month 	= toBCD(month);

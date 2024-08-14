@@ -21,7 +21,7 @@ typedef struct{
 	uint8_t 		day;			//1-31
 	uint8_t 		weekDay;	//1-7
 	uint8_t 		month;		//1-12
-	uint8_t 		year;			//año completo, p.ej. 2024
+	uint8_t 		year;			//>=24
 	commandType currentCommand;
 	}timeDate_t;
 

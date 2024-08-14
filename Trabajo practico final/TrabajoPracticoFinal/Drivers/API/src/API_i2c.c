@@ -4,8 +4,8 @@
 #include "API_uart.h"
 #include "stdio.h"
 /*rango de 0x00 a 0x7F + caracter nulo */
-#define MAX_SIZE_ADDRESS 3
-#define TIMEOUT 100
+#define MAX_SIZE_ADDRESS 	3
+#define TIMEOUT 					100
 
 /*----------------------------------------------------------------------------*/
 /*												DECLARACION DE VARIABLES Y TIPOS 						  			*/
@@ -73,7 +73,7 @@ void i2cScanner(){
 	/*for: conocer todos los dispositivos vinculados a i2c1*/
 	for(uint8_t i=1; i<128; i++){
 		/*i<<1 :los 7 bits mas significativos representan la direccion I2C*/
-		if(HAL_I2C_IsDeviceReady(&hi2c1, (uint16_t)(i<<1), 1, 100) == HAL_OK){
+		if(HAL_I2C_IsDeviceReady(&hi2c1, (uint16_t)(i<<1), 1, TIMEOUT) == HAL_OK){
 			sprintf(hexAddress,"%02X",i);
 			/*informar su direccion por UART*/
 			uartSendString((uint8_t *)"Dispositivo detectado: 0x");
