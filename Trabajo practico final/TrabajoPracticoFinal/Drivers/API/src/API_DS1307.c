@@ -16,13 +16,6 @@
 /*----------------------------------------------------------------------------*/
 /*												DECLARACION DE VARIABLES Y TIPOS 						  			*/
 /*----------------------------------------------------------------------------*/
-static const uint8_t initialRegisterAddress = 0x00;
-timeDate_t 	myrtcData;
-alarm_t 		myAlarm;
-
-/*----------------------------------------------------------------------------*/
-/*											PROTOTIPOS DE FUNCIONES PRIVADAS 						  				*/
-/*----------------------------------------------------------------------------*/
 typedef enum{
 	INIT,
 	WAIT,
@@ -32,7 +25,14 @@ typedef enum{
 	ALARM_TRIGGERED
 }rtcState_t;
 
+static const uint8_t initialRegisterAddress = 0x00;
+timeDate_t 	myrtcData;
+static 			alarm_t 		myAlarm;
 static 			rtcState_t estadoActual;
+/*----------------------------------------------------------------------------*/
+/*											PROTOTIPOS DE FUNCIONES PRIVADAS 						  				*/
+/*----------------------------------------------------------------------------*/
+
 static bool compare (uint8_t *string1, uint8_t *string2, size_t size);
 /*----------------------------------------------------------------------------*/
 /*														DEFINICION DE FUNCIONES 						  					*/
