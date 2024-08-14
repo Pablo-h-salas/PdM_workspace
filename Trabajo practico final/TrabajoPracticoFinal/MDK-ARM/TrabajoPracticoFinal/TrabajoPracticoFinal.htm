@@ -3,7 +3,7 @@
 <title>Static Call Graph - [TrabajoPracticoFinal\TrabajoPracticoFinal.axf]</title></head>
 <body><HR>
 <H1>Static Call Graph for image TrabajoPracticoFinal\TrabajoPracticoFinal.axf</H1><HR>
-<BR><P>#&#060CALLGRAPH&#062# ARM Linker, 5060750: Last Updated: Tue Aug 13 22:13:07 2024
+<BR><P>#&#060CALLGRAPH&#062# ARM Linker, 5060750: Last Updated: Wed Aug 14 19:32:38 2024
 <BR><P>
 <H3>Maximum Stack Usage =        216 bytes + Unknown(Functions without stacksize, Cycles, Untraceable Function Pointers)</H3><H3>
 Call chain for Maximum Stack Depth:</H3>
@@ -1072,7 +1072,7 @@ Global Symbols
 <BR><BR>[Called By]<UL><LI><a href="#[85]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;__printf
 </UL>
 
-<P><STRONG><a name="[da]"></a>checkAlarm</STRONG> (Thumb, 52 bytes, Stack size 0 bytes, api_ds1307.o(i.checkAlarm))
+<P><STRONG><a name="[da]"></a>checkAlarm</STRONG> (Thumb, 56 bytes, Stack size 0 bytes, api_ds1307.o(i.checkAlarm))
 <BR><BR>[Called By]<UL><LI><a href="#[d5]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;rtcFSM_update
 </UL>
 
@@ -1127,7 +1127,7 @@ Global Symbols
 <BR><BR>[Called By]<UL><LI><a href="#[d5]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;rtcFSM_update
 </UL>
 
-<P><STRONG><a name="[d6]"></a>readData</STRONG> (Thumb, 74 bytes, Stack size 16 bytes, api_ds1307.o(i.readData))
+<P><STRONG><a name="[d6]"></a>readData</STRONG> (Thumb, 76 bytes, Stack size 16 bytes, api_ds1307.o(i.readData))
 <BR><BR>[Stack]<UL><LI>Max Depth = 136<LI>Call Chain = readData &rArr; i2cReceiveData &rArr; HAL_I2C_Master_Receive &rArr; I2C_MasterRequestRead &rArr; I2C_WaitOnMasterAddressFlagUntilTimeout
 </UL>
 <BR>[Calls]<UL><LI><a href="#[d2]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;i2cSendData
@@ -1156,6 +1156,7 @@ Global Symbols
 </UL>
 <BR>[Calls]<UL><LI><a href="#[d3]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;uartInit
 <LI><a href="#[cf]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;i2cInit
+<LI><a href="#[d0]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;uartSendString
 <LI><a href="#[d8]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;readuartStatus
 <LI><a href="#[d7]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;readi2cStatus
 <LI><a href="#[d9]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;readCommand
@@ -1165,7 +1166,6 @@ Global Symbols
 <LI><a href="#[dd]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;setAlarm
 <LI><a href="#[d6]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;readData
 <LI><a href="#[da]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;checkAlarm
-<LI><a href="#[d0]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;uartSendString
 </UL>
 <BR>[Called By]<UL><LI><a href="#[7b]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;main
 </UL>
@@ -1182,10 +1182,10 @@ Global Symbols
 <BR><BR>[Stack]<UL><LI>Max Depth = 200 + Unknown Stack Size
 <LI>Call Chain = setDate &rArr; showInfo &rArr; __2snprintf &rArr; _printf_char_common &rArr; __printf
 </UL>
-<BR>[Calls]<UL><LI><a href="#[d2]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;i2cSendData
+<BR>[Calls]<UL><LI><a href="#[d0]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;uartSendString
+<LI><a href="#[d2]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;i2cSendData
 <LI><a href="#[df]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;showInfo
 <LI><a href="#[d6]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;readData
-<LI><a href="#[d0]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;uartSendString
 </UL>
 <BR>[Called By]<UL><LI><a href="#[d5]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;rtcFSM_update
 </UL>
@@ -1194,15 +1194,15 @@ Global Symbols
 <BR><BR>[Stack]<UL><LI>Max Depth = 200 + Unknown Stack Size
 <LI>Call Chain = setTime &rArr; showInfo &rArr; __2snprintf &rArr; _printf_char_common &rArr; __printf
 </UL>
-<BR>[Calls]<UL><LI><a href="#[d2]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;i2cSendData
+<BR>[Calls]<UL><LI><a href="#[d0]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;uartSendString
+<LI><a href="#[d2]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;i2cSendData
 <LI><a href="#[df]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;showInfo
 <LI><a href="#[d6]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;readData
-<LI><a href="#[d0]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;uartSendString
 </UL>
 <BR>[Called By]<UL><LI><a href="#[d5]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;rtcFSM_update
 </UL>
 
-<P><STRONG><a name="[df]"></a>showInfo</STRONG> (Thumb, 38 bytes, Stack size 48 bytes, api_ds1307.o(i.showInfo))
+<P><STRONG><a name="[df]"></a>showInfo</STRONG> (Thumb, 42 bytes, Stack size 48 bytes, api_ds1307.o(i.showInfo))
 <BR><BR>[Stack]<UL><LI>Max Depth = 184 + Unknown Stack Size
 <LI>Call Chain = showInfo &rArr; __2snprintf &rArr; _printf_char_common &rArr; __printf
 </UL>

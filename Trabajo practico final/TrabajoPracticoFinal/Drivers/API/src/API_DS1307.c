@@ -122,6 +122,11 @@ void rtcFSM_update(){
 	*@return 	none
 	*/
 void readData(timeDate_t * rtc){
+	/*chequear puntero nulo*/
+	if (rtc == NULL){
+		return;
+	}
+	
 	uint8_t lectura_RTC[TOTAL_REG] = {0};// para seg, min, hora, dia de semana, fecha del mes, mes, año.
 	char 		miString[3];
 
@@ -151,7 +156,7 @@ rtc-> year 		= lectura_RTC[6];
 void validateCommand(uint8_t * commandBuffer, timeDate_t * timeSettings){
 	uint8_t weekDay, day, month, year, hours, minutes;
 	/*verificar si el puntero no es nulo*/
-	if (commandBuffer == NULL){
+	if (commandBuffer == NULL || timeSettings== NULL){
 		return;
 	}
 	/*Establecer comando nulo si no coincide con los establecidos*/
@@ -268,6 +273,11 @@ bool setAlarm(alarm_t * alarm){
 	*@return 	true si se ha escrito con exito, caso contrario false.
 	*/
 bool checkAlarm(alarm_t* alarm, timeDate_t *rtcTime){
+	/*chequear puntero nulo*/
+	if(alarm == NULL || rtcTime == NULL){
+		return false;
+	}
+	
 	if(alarm->alarmEnabled &&
 		rtcTime->hour == alarm->hour &&
 		rtcTime->minute == alarm->minute &&
@@ -327,6 +337,11 @@ uint8_t toBCD (uint8_t value){
 	*@return 	none
 	*/
 void showInfo(timeDate_t *rtc){
+	// chequear puntero nulo
+	if (rtc == NULL){
+		return;
+	}
+	
 	char myString[20];
 	snprintf(myString, sizeof(myString), "%02X/%02X/%02X %02X:%02X\r\n",
 		rtc->day, rtc->month, rtc->year, rtc->hour, rtc->minute);

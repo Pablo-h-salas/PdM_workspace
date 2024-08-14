@@ -1,4 +1,5 @@
 #include "stm32f4xx_hal.h"
+#include "main.h"
 #include "API_uart.h"
 #include "API_DS1307.h"
 
@@ -184,7 +185,7 @@ void uartReceiveStringSize(uint8_t * pstring, uint16_t size){
 	*/
 static void uartErrorHandler() {
 	while (1) {
-		//BSP_LED_On(LED2);
+		HAL_GPIO_WritePin(GPIOB, LD1_Pin, GPIO_PIN_SET);
 	}
 }
 

@@ -13,7 +13,6 @@ extern I2C_HandleTypeDef hi2c1;
 /*----------------------------------------------------------------------------*/
 bool i2cInit();
 bool i2cSendData(uint16_t devAddress, uint8_t *pData, uint16_t size);
-
 bool i2cReceiveData(uint16_t devAddress, uint8_t *pData, uint16_t size);
 bool readi2cStatus();
 

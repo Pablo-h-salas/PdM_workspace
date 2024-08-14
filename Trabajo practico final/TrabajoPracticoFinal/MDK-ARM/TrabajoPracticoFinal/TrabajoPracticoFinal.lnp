@@ -22,8 +22,6 @@
 "trabajopracticofinal\stm32f4xx_hal_tim_ex.o"
 "trabajopracticofinal\stm32f4xx_hal_uart.o"
 "trabajopracticofinal\system_stm32f4xx.o"
-"trabajopracticofinal\api_debounce.o"
-"trabajopracticofinal\api_delay.o"
 "trabajopracticofinal\api_ds1307.o"
 "trabajopracticofinal\api_i2c.o"
 "trabajopracticofinal\api_uart.o"

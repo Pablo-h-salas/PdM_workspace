@@ -517,16 +517,6 @@
           <GroupName>Drivers/API</GroupName>
           <Files>
             <File>
-              <FileName>API_debounce.c</FileName>
-              <FileType>1</FileType>
-              <FilePath>..\Drivers\API\src\API_debounce.c</FilePath>
-            </File>
-            <File>
-              <FileName>API_delay.c</FileName>
-              <FileType>1</FileType>
-              <FilePath>..\Drivers\API\src\API_delay.c</FilePath>
-            </File>
-            <File>
               <FileName>API_DS1307.c</FileName>
               <FileType>1</FileType>
               <FilePath>..\Drivers\API\src\API_DS1307.c</FilePath>
